@@ -16,15 +16,17 @@ class JsonDecoder
     }
 
     /**
-     * @param  string           $json
-     * @param  string|\stdClass $schema
+     * @param string $json
+     * @param string|\stdClass $schema
+     * @param integer|null $checkMode
      * @return mixed
      */
-    public function decode($json, $schema)
+    public function decode($json, $schema, $checkMode = null)
     {
         return $this->validator->validate(
             json_decode($json),
-            is_string($schema) ? (object)["\$ref" => "flapi://$schema"] : $schema
+            is_string($schema) ? (object)["\$ref" => "flapi://$schema"] : $schema,
+            $checkMode
         );
     }
 
