@@ -3,7 +3,7 @@
     "description": "Validate json data with json-schema",
     "keywords": ["json", "json-schema", "validation"],
     "homepage": "https://github.com/texthtml/json-schema",
-    "license": "aGPLv3",
+    "license": "AGPL-3.0-or-later",
     "require": {
         "php": "^5.6|^7.0",
         "justinrainbow/json-schema": "^5.0"
